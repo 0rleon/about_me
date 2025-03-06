@@ -1,0 +1,243 @@
+/* Основные стили */
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        135deg,
+        #541A2E,
+        #B51A2B,
+        #FFA586,
+        #384358,
+        #242F49,
+        #161E2F
+    );
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота страницы — 100% высоты экрана */
+}
+
+/* Контейнер для основного контента */
+.main-content {
+    flex: 1; /* Растягиваем контейнер на всё доступное пространство */
+    padding-bottom: 80px; /* Отступ снизу, чтобы футер не перекрывал контент */
+}
+
+/* Анимация для градиента */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Шапка */
+header {
+    background-color: rgba(17, 17, 17, 0.8);
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #ff6347;
+}
+
+/* Секции */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(42, 42, 42, 0.8);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+section h2 {
+    color: #fff;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Стили для списков */
+section ul, section li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+section li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #ddd;
+    font-weight: 400;
+}
+
+section li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Стили для ссылок */
+section a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #e5533d;
+    text-decoration: underline;
+}
+
+/* Подвал */
+footer {
+    background-color: rgba(17, 17, 17, 0.8);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+footer p {
+    margin: 0;
+    color: #aaa;
+    font-weight: 400;
+}
+
+/* Стили для соцсетей */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.social-links a:hover {
+    color: #ff6347;
+}
+
+/* Анимации для текста */
+h1, h2, p, nav a, .social-links a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для кнопки "Вверх" */
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(
+        135deg,
+        #EE4540,
+        #C72C41,
+        #801336,
+        #801336,
+        #2D132C,
+        #161E2F
+    );
+    background-size: 400% 400%;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 900;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: gradientBackground 10s ease infinite;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrollToTop:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Анимация градиента для кнопки */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Анимация появления текста */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Задержки для анимации */
+.fade-in.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.fade-in.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.fade-in.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.fade-in.delay-4 {
+    animation-delay: 0.8s;
+}
